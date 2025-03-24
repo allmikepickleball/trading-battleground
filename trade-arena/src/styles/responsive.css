@@ -1,0 +1,131 @@
+/* Responsive design improvements for Trade Arena */
+
+/* Base styles for mobile-first approach */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  /* Header adjustments for mobile */
+  header {
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Adjust grid layouts for small screens */
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Stack form elements on mobile */
+  .form-row {
+    flex-direction: column;
+  }
+  
+  /* Adjust table displays for mobile */
+  .responsive-table {
+    overflow-x: auto;
+  }
+  
+  /* Adjust chart sizes for mobile */
+  .chart-container {
+    height: 250px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 1.5rem;
+  }
+  
+  /* Adjust grid layouts for medium screens */
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  /* Adjust chart sizes for tablets */
+  .chart-container {
+    height: 300px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  /* Adjust grid layouts for desktop */
+  .grid-layout {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Adjust grid layouts for large screens */
+  .grid-layout {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .no-print {
+    display: none;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Already using dark theme, but could add specific overrides here */
+}
